@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="70 90 1470 240" role="img" aria-labelledby="title desc">
+  <title id="title">Forbidden AI</title>
+  <desc id="desc">Forbidden AI wordmark with a red prohibition slash and blue-purple AI.</desc>
+  <defs>
+    <linearGradient id="ai" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#146BFF"/>
+      <stop offset="100%" stop-color="#8A20FF"/>
+    </linearGradient>
+  </defs>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#fff">
+    <text x="80" y="290" font-size="250" letter-spacing="-14">Forbidden</text>
+  </g>
+  <circle cx="300" cy="216" r="57" fill="none" stroke="#fff" stroke-width="38"/>
+  <line x1="258" y1="258" x2="342" y2="174" stroke="#f5222d" stroke-width="28" stroke-linecap="round"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="url(#ai)">
+    <text x="1240" y="290" font-size="250" letter-spacing="-18">AI</text>
+  </g>
+</svg>
