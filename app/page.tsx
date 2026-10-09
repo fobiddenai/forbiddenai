@@ -8,16 +8,24 @@ import { approachSteps, practices, site } from "@/lib/site";
 export default function HomePage() {
   return (
     <PageFrame>
-      <section className="relative min-h-[70vh] overflow-hidden pt-6 md:pt-10">
-        <SlashMark className="pointer-events-none absolute -top-16 -right-10 w-[min(72vw,34rem)] text-white/8 md:-top-24 md:right-[4%]" />
-        <StudioMeta />
-        <h1 className="mt-10 max-w-4xl font-display text-[2.7rem] leading-[0.95] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[5.35rem]">
+      <section className="relative min-h-[70vh] pt-2 md:pt-4">
+        <SlashMark className="pointer-events-none absolute -top-4 -right-10 w-[min(72vw,34rem)] text-white/8 md:-top-2 md:right-[4%]" />
+        <div className="animate-fade-in-up">
+          <StudioMeta />
+        </div>
+        <h1
+          className="mt-10 max-w-4xl font-display text-[2.7rem] leading-[0.95] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[5.35rem] animate-fade-in-up"
+          style={{ animationDelay: "150ms" }}
+        >
           We keep the useful parts.
           <span className="mt-2 block italic text-white/88">
             The rest stays forbidden.
           </span>
         </h1>
-        <p className="mt-8 max-w-xl text-lg leading-8 text-white/68 md:text-xl">
+        <p
+          className="mt-8 max-w-xl text-lg leading-8 text-white/68 md:text-xl animate-fade-in-up"
+          style={{ animationDelay: "300ms" }}
+        >
           {site.lede}
         </p>
       </section>
@@ -39,7 +47,7 @@ export default function HomePage() {
           </div>
           <Link
             href="/services"
-            className="text-sm text-white/55 transition-colors hover:text-white"
+            className="text-sm text-white/55 transition-all duration-300 ease-out hover:text-white"
           >
             Full services →
           </Link>
@@ -111,7 +119,7 @@ export default function HomePage() {
           </div>
           <Link
             href="/approach"
-            className="text-sm text-white/55 transition-colors hover:text-white"
+            className="text-sm text-white/55 transition-all duration-300 ease-out hover:text-white"
           >
             How we work →
           </Link>

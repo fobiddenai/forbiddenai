@@ -13,7 +13,6 @@ export function Wordmark({ className, priority = false }: WordmarkProps) {
       width={400}
       height={105}
       className={className}
-      unoptimized
       priority={priority}
     />
   );
