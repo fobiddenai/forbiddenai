@@ -23,9 +23,17 @@ export function PageIntro({ kicker, title, lede }: PageIntroProps) {
   );
 }
 
-export function PageFrame({ children }: { children: React.ReactNode }) {
+export function PageFrame({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <div className="relative mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24 lg:px-16">
+    <div
+      className={`relative mx-auto max-w-[1400px] px-6 pt-8 pb-10 md:px-10 md:pt-12 md:pb-14 lg:px-16 ${className}`}
+    >
       {children}
     </div>
   );
@@ -38,7 +46,7 @@ export function InquireSoonLink({ label = "Inquiries open here, soon" }: { label
       className="inline-flex items-center gap-3 text-sm tracking-[0.04em] text-white"
     >
       <span className="size-[0.55rem] rounded-full bg-slash" aria-hidden />
-      <span className="border-b border-white/35 pb-0.5 transition-colors hover:border-white">
+      <span className="border-b border-white/35 pb-0.5 transition-all duration-300 ease-out hover:border-white">
         {label}
       </span>
     </Link>

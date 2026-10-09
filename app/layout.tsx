@@ -3,6 +3,8 @@ import { IBM_Plex_Mono, IBM_Plex_Sans, Newsreader } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { site } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -67,7 +69,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${newsreader.variable} ${plexSans.variable} ${plexMono.variable} h-full antialiased`}
+      className={`${newsreader.variable} ${plexSans.variable} ${plexMono.variable} h-full antialiased scroll-smooth`}
     >
       <body className="flex min-h-full flex-col bg-black font-sans text-white">
         <a
@@ -81,6 +83,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <SiteFooter />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
