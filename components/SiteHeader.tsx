@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { WordmarkType } from "@/components/Wordmark";
+import { Wordmark } from "@/components/Wordmark";
 import { nav, site } from "@/lib/site";
 
 export function SiteHeader() {
@@ -12,7 +12,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-white/10 bg-black/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-6 py-4 md:px-10 lg:px-16">
         <Link href="/" aria-label={`${site.name} home`} className="shrink-0">
-          <WordmarkType />
+          <Wordmark className="h-20 md:h-24 w-auto" />
         </Link>
         <nav aria-label="Primary" className="flex flex-wrap items-center justify-end gap-x-5 gap-y-1 text-[0.8rem] tracking-[0.04em] uppercase">
           {nav.map((item) => {
