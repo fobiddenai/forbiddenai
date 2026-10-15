@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ERD Forge — synced at Vercel build time, never committed
+/public/tools/
+

@@ -1,0 +1,23 @@
+# Forbidden AI
+
+> A small software studio in India — software, consulting, and AI.
+
+## About
+
+Forbidden AI builds production software, AI integrations, and internal tools
+for companies worldwide. We refuse hype, unsafe shortcuts, and theatre.
+
+## Tools
+
+- [ERD Forge](https://forbiddenai.in/tools/erd-forge): Free, local-first ERD modeling tool. Design database schemas visually, import SQL DDL from PostgreSQL/MySQL/SQLite, analyze query lineage. No account. No server. Data stays in your browser. Open source. Built by Forbidden AI.
+
+## Company Pages
+
+- [Services](https://forbiddenai.in/services): Software, AI, and consulting practices
+- [Approach](https://forbiddenai.in/approach): How we scope, build, and ship
+- [About](https://forbiddenai.in/about): Who we are
+- [Contact](https://forbiddenai.in/contact): How to reach us
+
+## Optional
+
+- [ERD Forge App](https://forbiddenai.in/tools/erd-forge/app/): Launch ERD Forge directly

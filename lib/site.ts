@@ -13,7 +13,29 @@ export const nav = [
   { href: "/services", label: "Services" },
   { href: "/approach", label: "Approach" },
   { href: "/about", label: "About" },
+  { href: "/tools/erd-forge", label: "Tools" },
   { href: "/contact", label: "Contact" },
+] as const;
+
+export const tools = [
+  {
+    slug: "erd-forge",
+    name: "ERD Forge",
+    href: "/tools/erd-forge",
+    appHref: "/tools/erd-forge/app/",
+    tagline: "Local-first ERD modeling and data catalog platform",
+    description:
+      "Design, visualize, and document database schemas in your browser. Import SQL DDL, analyze query lineage, export diagrams. Local-first — no account, no server, your data never leaves your device.",
+    keywords: [
+      "ERD",
+      "database schema",
+      "SQL DDL",
+      "entity relationship diagram",
+      "data lineage",
+      "local-first",
+    ],
+    openSource: true,
+  },
 ] as const;
 
 export const practices = [
