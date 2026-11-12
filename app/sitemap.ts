@@ -3,7 +3,10 @@ import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = ["", "/services", "/approach", "/about", "/contact", "/privacy"];
-  const toolPaths = [{ path: "/tools/erd-forge", freq: "weekly" as const, priority: 0.9 }];
+  const toolPaths = [
+    { path: "/tools/erd-forge", freq: "weekly" as const, priority: 0.9 },
+    { path: "/tools/erd-forge/sql-lineage", freq: "weekly" as const, priority: 0.9 },
+  ];
 
   return [
     ...paths.map((path) => ({

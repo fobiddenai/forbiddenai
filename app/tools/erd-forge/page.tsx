@@ -37,6 +37,8 @@ export const metadata: Metadata = {
     "no account database tool",
     "entity relationship diagram",
     "query lineage analyzer",
+    "sql lineage visualizer",
+    "column-level sql lineage",
     "wa-sqlite",
     "OPFS database designer",
   ],
@@ -55,13 +57,13 @@ const jsonLd = {
     priceCurrency: "USD",
   },
   description:
-    "Local-first ERD modeling and data catalog platform. Design database schemas visually, import SQL DDL from PostgreSQL, MySQL, and SQLite, analyze query lineage, and export diagrams — all in the browser. No account. No server. Your data never leaves your device.",
+    "Local-first ERD modeling and SQL lineage analyzer. Design database schemas visually, import SQL DDL from PostgreSQL, MySQL, SQLite, and SQL Server, trace table and column-level query lineage across 9 dialects, and export diagrams — all in the browser. No account. No server. Your data never leaves your device.",
   featureList: [
     "Visual ERD canvas with drag-and-drop tables",
-    "SQL DDL import — PostgreSQL, MySQL, SQLite",
-    "SQL query lineage analyzer",
+    "SQL DDL import — PostgreSQL, MySQL, SQLite, SQL Server",
+    "Table and column-level SQL query lineage analyzer across 9 dialects",
     "Local-first OPFS storage — data never leaves the browser",
-    "Export diagrams to PNG and SVG",
+    "Export diagrams to PNG, SVG, and lineage mappings to CSV",
     "Progressive Web App — installable, works offline",
     "Dark and light theme",
     "Free and open source",
@@ -88,13 +90,13 @@ const capabilities = [
     number: "02",
     title: "Multi-Dialect SQL DDL Import",
     summary:
-      "Paste existing CREATE TABLE statements from PostgreSQL, MySQL, or SQLite. ERD Forge parses schemas instantly without a connected database.",
+      "Paste existing CREATE TABLE statements from PostgreSQL, MySQL, SQLite, or SQL Server. ERD Forge parses schemas instantly without a connected database.",
   },
   {
     number: "03",
     title: "SQL Query Lineage Analyzer",
     summary:
-      "Inspect complex queries to trace data origin, column transformations, joins, and downstream dependencies across your tables.",
+      "Inspect multi-CTE queries in your browser to trace table and column-level lineage, joins, and downstream impact across 9 SQL dialects including Snowflake and BigQuery.",
   },
   {
     number: "04",
@@ -158,11 +160,19 @@ export default function ERDForgeLandingPage() {
               <span aria-hidden>→</span>
             </a>
 
+            <Link
+              href="/tools/erd-forge/sql-lineage"
+              className="inline-flex items-center gap-2 border border-white/20 px-6 py-3.5 text-sm font-medium tracking-wide text-white/80 transition-all duration-300 ease-out hover:border-white/50 hover:text-white"
+            >
+              <span>SQL Lineage Analyzer</span>
+              <span aria-hidden>→</span>
+            </Link>
+
             <a
               href="https://github.com/fobiddenai/erd-forge"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-white/20 px-6 py-3.5 text-sm font-medium tracking-wide text-white/80 transition-all duration-300 ease-out hover:border-white/50 hover:text-white"
+              className="inline-flex items-center gap-2 border border-white/15 px-5 py-3.5 text-sm font-medium tracking-wide text-white/65 transition-all duration-300 ease-out hover:border-white/40 hover:text-white"
             >
               <span>GitHub</span>
               <span aria-hidden>↗</span>
@@ -174,7 +184,7 @@ export default function ERDForgeLandingPage() {
               <span className="text-white/80">Storage:</span> In-Browser OPFS (SQLite)
             </div>
             <div>
-              <span className="text-white/80">SQL Dialects:</span> PostgreSQL, MySQL, SQLite
+              <span className="text-white/80">Lineage Dialects:</span> 9 Engines (Snowflake, BigQuery, Postgres...)
             </div>
             <div>
               <span className="text-white/80">Pricing:</span> 100% Free & Open Source
